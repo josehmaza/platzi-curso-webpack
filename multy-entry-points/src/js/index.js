@@ -1,0 +1,1 @@
+console.log('el index de multi entry points')

@@ -1,0 +1,1 @@
+console.log('el contatcos de multi entry points')

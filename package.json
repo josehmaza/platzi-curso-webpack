@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --entry ./index.js --output ./bundle.js --mode development",
     "build:local": "webpack --mode production",
-    "build:external": "webpack --config ./external/webpack.external.config.js"
+    "build:external": "webpack --config ./external/webpack.external.config.js",
+    "build:multi": "webpack --config ./multy-entry-points/webpack.external.config.js"
   },
   "author": "jmaza",
   "license": "ISC",
