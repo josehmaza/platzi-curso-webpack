@@ -8,11 +8,14 @@
     "build": "webpack --entry ./index.js --output ./bundle.js --mode development",
     "build:local": "webpack --mode production",
     "build:external": "webpack --config ./external/webpack.external.config.js",
-    "build:multi": "webpack --config ./multy-entry-points/webpack.external.config.js"
+    "build:multi": "webpack --config ./multy-entry-points/webpack.external.config.js",
+    "build:css-loader": "webpack --config ./css-style-loader/webpack.external.config.js"
   },
   "author": "jmaza",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "3.4.2",
+    "style-loader": "1.1.3",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11"
   }
