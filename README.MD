@@ -27,3 +27,11 @@ npm i -D @babel/plugin-transform-runtime
 
 install no como dependencia de desarrollo @babel/runtime  (Va a jalar el core del runtime y da soporte para que los generadores funcionen de tal manera que se ejecuten ciertas caracteristicas especiales, en este caso se necesitaba usar async, y para eso se instala el plugin @babel/plugin-transform-runtime y es ejcutada sobre @babel/runtime)
 npm i --save --save-exact @babel/runtime
+
+
+class: Soporte de JSX
+
+npm i --save react react
+
+install dependency core
+npm i --save react react-dom 
