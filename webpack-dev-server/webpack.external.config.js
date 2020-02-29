@@ -2,7 +2,9 @@
 const path = require('path')
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 // EL __dirname es apartir de donde esta el archivo de configuracion de webpack
 module.exports = {
     entry: {
@@ -20,21 +22,28 @@ module.exports = {
             {
                 "test": /\.css$/,
                 use: [
-                    {
+                    'style-loader',
+                   /* {
                         loader: MiniCssExtractPlugin.loader
-                    },
+                    },*/
                     // Primsero se ejecuta esto, entien que puede enconstrar un css en js,
                     'css-loader']   
             }
         ]
     },
-
+    // configuracion para el dev server
+    devServer: {
+        hot:true,
+        open: true,
+        port: 8081
+    },
     plugins: [
-        new MiniCssExtractPlugin({
+        new webpack.HotModuleReplacementPlugin(),
+        /*new MiniCssExtractPlugin({
             filename: 'css/[name].css'
-        }),
+        }),*/
         new HtmlWebpackPlugin({
-            title: 'Plugins from plugin'
+            title: 'webpack-dev-servre from plugin'
         })
     ]
 }
