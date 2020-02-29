@@ -1,4 +1,4 @@
-function text () {
+const text = () => {
     class Pepe  {
         constructor(){
             console.log('iniciando el constructor')
