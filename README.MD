@@ -14,3 +14,8 @@ para que se actualize el navegador se instala webpack-dev-server (Aqui ya no es 
 webpack-dev-server -D 
 
 Se corre el comando npm run build:dev-server
+
+
+Class: Soporte de javascript moderno
+install dependencies 
+npm i --save-exact --save-dev @babel/core babel-loader @babel/preset-env
