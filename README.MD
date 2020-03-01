@@ -35,3 +35,7 @@ npm i --save react react
 
 install dependency core
 npm i --save react react-dom 
+
+class: Soporte imagenes, fuentes y videos
+npm i -D url-loader --save-exact
+npm i -D file-loader --save-exact
