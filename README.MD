@@ -47,3 +47,6 @@ npm install --save-exact -D stylus less node-sass
 postcss require configuracion extra
 npm install --save-dev --save-exact postcss-nested
 archivo de configuracion para postcsss
+
+class: Evitar codigo duplicado
+se hace uso de splitChunk (configuracion de webpack) para poner en un archivo todo el codigo duplicado, caso contrario, cada archivo js estaria compilandose con todo lo que necesita en un solo archivo y asi x cada uno,
