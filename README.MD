@@ -39,3 +39,11 @@ npm i --save react react-dom
 class: Soporte imagenes, fuentes y videos
 npm i -D url-loader --save-exact
 npm i -D file-loader --save-exact
+
+class: Estilos con preprocesadores
+npm install sass-loader stylus-loader less-loader postcss-loader -D --save-exact
+npm install --save-exact -D stylus less node-sass
+
+postcss require configuracion extra
+npm install --save-dev --save-exact postcss-nested
+archivo de configuracion para postcsss
