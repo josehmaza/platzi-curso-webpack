@@ -14,15 +14,18 @@
     "build:babel": "webpack-dev-server --config ./webpack-babel/webpack.external.config.js -w",
     "build:react": "webpack-dev-server --config ./webpack-react/webpack.external.config.js -w",
     "build:url-loader": "webpack-dev-server --config ./webpack-url-loader/webpack.external.config.js ",
-    "build:pre-pro": "webpack-dev-server --config ./webpack-pre-pro/webpack.external.config.js ",
+    "build:pre-pro": "webpack --config ./webpack-pre-pro/webpack.external.config.js ",
     "build:prevent-duplication": "webpack --config ./webpack-prevent-duplicate/webpack.external.config.js ",
     "build:dll": "webpack --config ./webpack-dll/webpack.dll.config.js ",
-    "build:prevent-duplication-fast": "webpack --config ./webpack-dll/webpack.config.js "
+    "build:prevent-duplication-fast": "webpack --config ./webpack-dll/webpack.config.js ",
+    "build:dynamic:dll": "webpack --config ./webpack-dynamic-import/webpack.dll.config.js ",
+    "build:dynamic": "webpack --config ./webpack-dynamic-import/webpack.config.js "
   },
   "author": "jmaza",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.8.6",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "7.8.6",
     "@babel/preset-react": "7.8.3",

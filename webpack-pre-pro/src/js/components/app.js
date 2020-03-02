@@ -6,7 +6,6 @@ import video from '../../video/que-es-core.mp4'
 import '../../sass/sass.scss'
 import '../../less/less.less'
 import '../../stylus/stylus.styl'
-import '../../css/postcss.css'
 
 console.log(data)
 

@@ -22,7 +22,7 @@ body {
   text-shadow: 1px 1px 1px black;
 }
 
-@import('./postcss.css')
+@import './postcss.css'
 .sass{color:pink}
 
 .less {
