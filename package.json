@@ -13,9 +13,11 @@
     "build:css-html-plugins": "webpack --config ./plugins/webpack.external.config.js",
     "build:babel": "webpack-dev-server --config ./webpack-babel/webpack.external.config.js -w",
     "build:react": "webpack-dev-server --config ./webpack-react/webpack.external.config.js -w",
-    "build:url-loader": "webpack-dev-server --config ./webpack-url-loader/webpack.external.config.js -w",
-    "build:pre-pro": "webpack-dev-server --config ./webpack-pre-pro/webpack.external.config.js -w",
-    "build:prevent-duplication": "webpack --config ./webpack-prevent-duplicate/webpack.external.config.js -w"
+    "build:url-loader": "webpack-dev-server --config ./webpack-url-loader/webpack.external.config.js ",
+    "build:pre-pro": "webpack-dev-server --config ./webpack-pre-pro/webpack.external.config.js ",
+    "build:prevent-duplication": "webpack --config ./webpack-prevent-duplicate/webpack.external.config.js ",
+    "build:dll": "webpack --config ./webpack-dll/webpack.dll.config.js ",
+    "build:prevent-duplication-fast": "webpack --config ./webpack-dll/webpack.config.js "
   },
   "author": "jmaza",
   "license": "ISC",
