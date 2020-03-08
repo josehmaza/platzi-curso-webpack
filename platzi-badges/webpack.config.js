@@ -7,15 +7,14 @@ const webpack = require('webpack');
 // EL __dirname es apartir de donde esta el archivo de configuracion de webpack
 module.exports = {
     entry: {
-        home: path.resolve(__dirname, 'src/js/index.js'),
-        contact: path.resolve(__dirname, 'src/js/contact.js')
+        app: path.resolve(__dirname, 'src/index.js'),
 
     },
-    mode: 'production',
+    //mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].js',
-        publicPath: 'dist/', //tambn se configura cdn aqui
+        publicPath: 'http://localhost:3001/', //(json server)ojo si sube a github pages 
         chunkFilename: 'js/[id].[chunkhash].js'
     },
     //loaders
@@ -38,52 +37,15 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader
                     },
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            importLoaders: 1
-                        }
-                    },
-
-                    'postcss-loader']
-            },
-            {
-                "test": /\.less$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    }, //inyectar en la pantalla
-                    'css-loader',//saber que va a ver css
-                    'less-loader'//primer va a ver less
-                ]
-
-            },
-            {
-                "test": /\.styl$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    'css-loader',
-                    'stylus-loader',
-                ]
-            },
-            {
-                "test": /\.scss$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader
-                    },
-                    'css-loader',
-                    'sass-loader',
-                ]
+                    'css-loader'
+                   ]
             },
             {
                 test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
                 use: {
                     loader: 'url-loader',
                     options: {
-                        limit: 90000  //9KB
+                        limit: 1000  //9KB
                     }
                 }
 
@@ -92,14 +54,13 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
             chunkFilename: 'css/[id].css'
         }),
         new HtmlWebpackPlugin({
-            title: 'webpack-dev-servre from plugin',
-            template: path.resolve(__dirname, './index.html')
+            //title: 'webpack-dev-servre from plugin',
+            template: path.resolve(__dirname, 'public/index.html')
         }),
         new webpack.DllReferencePlugin({
             manifest: require('./modules-manifest.json')

@@ -8,7 +8,8 @@ module.exports = {
         //se generara un bundle modules
         modules: [
             'react',
-            'react-dom'
+            'react-dom',
+            'react-router-dom',
         ]
     },
     mode: 'production',
