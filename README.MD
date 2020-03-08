@@ -50,3 +50,37 @@ archivo de configuracion para postcsss
 
 class: Evitar codigo duplicado
 se hace uso de splitChunk (configuracion de webpack) para poner en un archivo todo el codigo duplicado, caso contrario, cada archivo js estaria compilandose con todo lo que necesita en un solo archivo y asi x cada uno,
+
+class: COnfiguracion de desarrollo para PLatzi Badges (React.js)
+@babel/runtime
+
+webpack
+webpack-cli
+webpack-dev-server
+css-loader
+style-loader
+file-loader
+babel-loader
+@babel/core
+@babel/preset-env
+@babel/preset-react
+
+@babel/plugin-sintax-dynamic-import
+       plugin-syntax-dynamic-import
+@babel/plugin-transform-runtime
+html-webpack-plugin
+Tambien se agrega un nuevo plugin x como esta el proyecto 
+npm install -D -S @babel/plugin-proposal-class-properties
+
+class: Configuracion basica de produccion
+npm install -S -D mini-css-extract-plugin url-loader
+
+class: Congfiguracion optima de produccion para platzi badges
+npm install -S -D add-asset-html-webpack-plugin
+
+class: Versionando limpiando y comprimiendo archivos
+npm install -D -S clean-webpack-plugin
+npm install -D -S optimize-css-assets-webpack-plugin terser-webpack-plugin
+
+
+
