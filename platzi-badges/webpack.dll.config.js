@@ -15,7 +15,7 @@ module.exports = {
     mode: 'production',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js', // exportara como modules.js,
+        filename: 'js/[name].[hash].dll.js', // exportara como modules.js, 
         library: '[name]' // va a se una libreria
     },
 

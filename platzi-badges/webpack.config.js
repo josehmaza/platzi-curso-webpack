@@ -3,7 +3,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
-
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
 // EL __dirname es apartir de donde esta el archivo de configuracion de webpack
 module.exports = {
     entry: {
@@ -64,6 +64,11 @@ module.exports = {
         }),
         new webpack.DllReferencePlugin({
             manifest: require('./modules-manifest.json')
+        }),
+        new AddAssetHtmlPlugin({
+            filepath: path.resolve(__dirname, 'dist/js/*.dll.js'),
+            outputPath: 'js',
+            publicPath: 'http://localhost:3001/js'
         })
     ],
 
